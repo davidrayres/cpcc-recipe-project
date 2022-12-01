@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Yummmy Recipes</title>
+    <link rel="icon" href="images/logo.png" />
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section id="MainHeader">
+      <img src="images/logo.png" />
+
+      <div id="SiteTitle">Yummy Recipes</div>
+      <input id="Search" type="text" />
+      <button id="AddButton">Add Recipe</button>
+    </section>
+
+    <section id="MainContent"></section>
+
+    <section id="MainFooter"></section>
+
+    <div id="Modal">
+      <div id="ModelContent">
+        <div class="close">&times;</div>
+        <div id="ModelHeader">
+          <img
+            src="http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg"
+          />
+          <div>
+            <div class="recipe-name">Yummy Recipe Title</div>
+            <div class="recipe-description">
+              This Shepherd's Pie is vegetarian comfort food at its best.
+              Carrots, mushrooms, peas, and green beans bathed in a creamy sauce
+              and topped with cheesy mashed potatoes make a diner's delight!
+            </div>
+          </div>
+        </div>
+
+        <div id="ModelBody">
+          <div class="recipe-container">
+            <div class="recipe-content ingredients">
+              <div class="recipe-label ingredients">Ingredients</div>
+              <ul>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+              </ul>
+            </div>
+            <div class="recipe-content steps">
+              <div class="recipe-label steps">Instructions</div>
+              <ul>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+                <li>ingredient item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="ModelFooter"></div>
+      </div>
+    </div>
+  </body>
+</html>
