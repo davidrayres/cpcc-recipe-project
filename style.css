@@ -31,7 +31,7 @@ body {
 
 #MainHeader img {
   width: 40px;
-  margin-right: .25rem
+  margin-right: 0.25rem;
 }
 
 #SiteTitle {
@@ -51,10 +51,10 @@ body {
 
   /* margin-right: 2rem; */
 }
-#Search:hover, #Search:focus {
-  box-shadow: 0px 1px 3px rgb(192, 185, 185)
+#Search:hover,
+#Search:focus {
+  box-shadow: 0px 1px 3px rgb(192, 185, 185);
 }
-
 
 #AddButton {
   margin-left: auto;
@@ -110,7 +110,7 @@ body {
 
 .recipe-name {
   margin: 0.5rem 0.75rem 0 0.75rem;
-  margin-bottom: 0; 
+  margin-bottom: 0;
   font-weight: 700;
   font-style: italic;
   text-align: center;
@@ -125,7 +125,7 @@ body {
 .recipe-details {
   text-align: center;
   margin-top: auto;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   color: rgb(235, 160, 0);
   font-weight: 300;
@@ -140,82 +140,79 @@ body {
   box-shadow: 0px 1px 3px #999;
 }
 
-
-
-
-
-
-
-
-
-/* The Modal (background) */
 #Modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  z-index: 1;
+  display: none;
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  padding-top: 5rem;
+  overflow: auto;
+  background-color: rgb(0 0 0 / 0.5);
 }
 
-/* Modal Content */
-#ModelContent {
+#ModalContent {
   border-radius: 0.5rem;
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  height: 90%;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
-/* Add Animation */
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
-#ModelHeader {
+#ModalHeader {
   display: flex;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 1rem;
 }
 
-#ModelHeader img {
+#ModalHeader img {
   width: 25%;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
-#ModelHeader .recipe-name {
+#ModalHeader .recipe-name {
   text-align: initial;
   margin-top: 0;
 }
 
-
-.close {
+#CloseModal {
   position: absolute;
   top: 0;
   right: 0.75rem;
   font-size: 1.75rem;
   font-weight: 300;
+  color: rgb(151, 150, 150);
 }
-.close:hover,
-.close:focus {
+#CloseModal:hover,
+#CloseModal:focus {
   font-weight: 600;
+  color: black;
   cursor: pointer;
 }
 
-#ModelBody {padding: 0 1.5rem;}
+#ModalBody {
+  padding: 0 1.5rem;
+}
 
-#ModelFooter {
+#ModalFooter {
   height: 1rem;
   border-radius: 0 0 0.5rem 0.5rem;
 }
-
 
 .recipe-container {
   display: flex;
@@ -225,7 +222,7 @@ body {
 }
 
 .recipe-label {
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
@@ -247,4 +244,8 @@ body {
   list-style-position: inside;
   font-size: 0.85rem;
   font-weight: 300;
+}
+
+hr {
+  margin: 1rem 2rem 2rem 2rem;
 }

@@ -1,6 +1,6 @@
 const RECIPES = [
   {
-    ref: 1001,
+    id: 1001,
     name: 'Crock Pot Roast',
     description:
       "This Shepherd's Pie is vegetarian comfort food at its best. Carrots, mushrooms, peas, and green beans bathed in a creamy sauce and topped with cheesy mashed potatoes make a diner's delight!",
@@ -43,7 +43,7 @@ const RECIPES = [
     originalURL: 'http://www.food.com/recipe/to-die-for-crock-pot-roast-27208',
   },
   {
-    ref: 1002,
+    id: 1002,
     name: 'Roasted Asparagus',
     description:
       'Creamy cheesy turkey enchiladas! Leftover turkey, sweet potatoes, and cream cheese rolled into flour tortillas, smothered with creamy salsa verde sauce. So good!',
@@ -82,7 +82,7 @@ const RECIPES = [
     originalURL: 'http://www.food.com/recipe/roasted-asparagus-50847',
   },
   {
-    ref: 1003,
+    id: 1003,
     name: 'Curried Lentils and Rice',
     description:
       "Pecan pralines are more than the sum of their parts: They're a rich, crunchy, candy-coated dream! This praline recipe is great for a holiday cookie tray or to ship to a friend.",
@@ -125,7 +125,7 @@ const RECIPES = [
       'https://media.istockphoto.com/id/870329822/photo/curried-lentil-soup.jpg?s=612x612&w=0&k=20&c=9fWWuD0s7gYy_WR_xvbr8Z8-rAp1ZT69BiWB_u070tA=',
   },
   {
-    ref: 1004,
+    id: 1004,
     name: 'Big Night Pizza',
     description:
       'A big turkey dinner means turkey soup is on deck! Use up leftover turkey and the turkey carcass in this delicious turkey noodle soup to enjoy for days.',
@@ -185,7 +185,7 @@ const RECIPES = [
       'http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg',
   },
   {
-    ref: 1005,
+    id: 1005,
     name: 'Cranberry and Apple Stuffed Acorn Squash Recipe',
     description:
       'Use up your turkey leftovers with this turkey tetrazzini recipe. It’s a hearty casserole with egg noodles, a creamy sauce, and just enough vegetables.',
@@ -237,7 +237,7 @@ const RECIPES = [
     originalURL: '',
   },
   {
-    ref: 1006,
+    id: 1006,
     name: "Mic's Yorkshire Puds",
     description:
       'Need a classy but easy side? Try this Brussels sprouts gratin. Made with blanched sprouts in a rich Gruyere sauce, it’s studded with diced pancetta for an extra bump of flavor.',
@@ -281,7 +281,7 @@ const RECIPES = [
       'http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg',
   },
   {
-    ref: 1007,
+    id: 1007,
     name: 'Old-Fashioned Oatmeal Cookies',
     description:
       'Honey mustard glazed pork chops with roasted sweet potatoes and Brussels sprouts. The perfect fall dinner. Everything roasts together on one sheet pan.',
@@ -365,7 +365,7 @@ const RECIPES = [
     originalURL: '#',
   },
   {
-    ref: 1008,
+    id: 1008,
     name: 'Blueberry Oatmeal Squares',
     description:
       'This hearty Brussels sprouts and kale salad is full of crunchy nuts and bacon, and tossed with a tangy dressing. Plus, several elements can be prepared ahead, making assembly a breeze for your holiday table or weekday lunch.',
@@ -438,7 +438,7 @@ const RECIPES = [
       'http://www.canadianliving.com/food/blueberry_oatmeal_squares.php',
   },
   {
-    ref: 1009,
+    id: 1009,
     name: 'Curried chicken salad',
     description:
       "Pecan pralines are more than the sum of their parts: They're a rich, crunchy, candy-coated dream! This praline recipe is great for a holiday cookie tray or to ship to a friend.",
