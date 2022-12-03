@@ -1,9 +1,10 @@
 <html>
   <head>
-    <title>Yummmy Recipes</title>
+    <title>Yummy Recipes</title>
     <link rel="icon" href="images/logo.png" />
     <script src="data.js" defer></script>
     <script src="app.js" defer></script>
+    <script src="recipe.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -24,50 +25,44 @@
       <!-- <div id="ModalContent">
         <div id="CloseModal">&times;</div>
         <div id="ModalHeader">
-          <img
-            src="http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg"
-          />
-          <div>
-            <div class="recipe-name">Yummy Recipe Title</div>
-            <div class="recipe-description">
-              This Shepherd's Pie is vegetarian comfort food at its best.
-              Carrots, mushrooms, peas, and green beans bathed in a creamy sauce
-              and topped with cheesy mashed potatoes make a diner's delight!
-            </div>
+          <img src="images/image-placeholder.png" />
+          <div style="flex: 1">
+            <input type="text" placeholder="Recipe Name" />
+            <textarea placeholder="Add description..." rows="5"></textarea>
           </div>
         </div>
 
         <hr />
 
         <div id="ModalBody">
-          <div class="recipe-container">
-            <div id="IngredientList" class="recipe-content ingredients">
-              <div class="recipe-label ingredients">Ingredients</div>
-              <ul>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-              </ul>
+          <div class="modal-recipe-container">
+            <div id="IngredientList" class="modal-recipe-content">
+              <div class="modal-recipe-label">Ingredients</div>
+
+              <div class="modal-recipe-uibox">
+                <input type="text" placeholder="Add an ingredient..." />
+                <button>+</button>
+              </div>
+
+              <ul></ul>
             </div>
 
-            <div id="InstructionList" class="recipe-content steps">
-              <div class="recipe-label steps">Instructions</div>
-              <ul>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-                <li>ingredient item</li>
-              </ul>
+            <div id="InstructionList" class="modal-recipe-content">
+              <div class="modal-recipe-label">Instructions</div>
+
+              <div class="modal-recipe-uibox">
+                <input type="text" placeholder="Add an instruction..." />
+                <button>+</button>
+              </div>
+
+              <ol></ol>
             </div>
           </div>
         </div>
 
-        <div id="ModalFooter"></div>
+        <div id="ModalFooter">
+          <button id="CreateNewRecipe">Save This Deliciousness</button>
+        </div>
       </div> -->
     </div>
   </body>

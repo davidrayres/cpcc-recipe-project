@@ -18,7 +18,28 @@ body {
   background: mintcream;
 }
 
-/* INDEX.HTML STYLES ============================================= */
+button {
+  margin-left: auto;
+  border-radius: 100px;
+  background: rgb(255 165 0 / 0.8);
+  box-shadow: rgb(255 165 0 / 1) 0 10px 10px -10px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 8px 18px;
+  border: none;
+}
+button:hover {
+  background: rgb(255 165 0 / 1);
+}
+button:active {
+  background: rgb(255 165 0 / 0.7);
+  transform: scale(0.95);
+}
+
+/* ELEMENT STYLES ================================================ */
 
 /* MainHeader ---------------------------------------------------- */
 #MainHeader {
@@ -56,27 +77,6 @@ body {
 #Search:hover,
 #Search:focus {
   box-shadow: 0px 1px 3px rgb(192, 185, 185);
-}
-
-#AddButton {
-  margin-left: auto;
-  border-radius: 100px;
-  background: rgb(255 165 0 / 0.8);
-  box-shadow: rgb(255 165 0 / 1) 0 10px 10px -10px;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 24px;
-  padding: 8px 18px;
-  border: none;
-}
-#AddButton:hover {
-  background: rgb(255 165 0 / 1);
-}
-#AddButton:active {
-  background: rgb(255 165 0 / 0.7);
-  transform: scale(0.95);
 }
 
 /* MainContent --------------------------------------------------- */
@@ -165,7 +165,7 @@ body {
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  /* height: 90%; */
+  height: 90%;
   width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
@@ -187,15 +187,49 @@ body {
   display: flex;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 1.5rem;
+  height: 30%;
 }
 
 #ModalHeader img {
-  width: 25%;
+  width: 180px;
+  height: 120px;
   border-radius: 0.25rem;
 }
-#ModalHeader .recipe-name {
-  text-align: initial;
+
+.modal-recipe-name {
+  margin: 0.5rem 0.75rem 0 0.75rem;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.1rem;
   margin-top: 0;
+  width: 97%;
+}
+.modal-recipe-description {
+  margin: 0.5rem 0.75rem 0 0.75rem;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+#ModalHeader input {
+  width: 97%;
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  font-size: 1rem;
+  margin-left: 0.75rem;
+  outline: none;
+}
+
+#ModalHeader textarea {
+  width: 97%;
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  margin: 0 1.5rem 0 0.75rem;
+  margin-top: 0.5rem;
+  resize: none;
 }
 
 #CloseModal {
@@ -216,46 +250,86 @@ body {
 /* Body within content box --------------------------------------- */
 #ModalBody {
   padding: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-bottom: 0;
+  height: 55%;
 }
 
-.recipe-container {
+.modal-recipe-container {
   display: flex;
-}
-.recipe-container li {
-  margin-bottom: 1rem;
+  height: 100%;
 }
 
-.recipe-label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.recipe-content:first-child {
-  border-right: 1px solid lightslategray;
-  padding-right: 0.25rem;
-}
-
-.recipe-content:last-child {
-  padding-left: 1.5rem;
-}
-
-.recipe-content {
+.modal-recipe-content {
   width: 100%;
   font-size: 0.85rem;
   font-weight: 300;
-  /* min-height: 100%; */
+  height: 100%;
   list-style-type: circle;
   list-style-position: inside;
   font-size: 0.85rem;
   font-weight: 300;
 }
 
+.modal-recipe-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.modal-recipe-uibox {
+  display: flex;
+}
+
+.modal-recipe-uibox input {
+  width: 90%;
+  margin-right: 0.25rem;
+  padding: 2px 4px;
+}
+
+.modal-recipe-uibox button {
+  padding: 2px 4px;
+  margin: 0;
+  line-height: initial;
+  font-weight: initial;
+}
+
+.modal-recipe-label {
+  height: 10%;
+}
+
+#ModalBody ul,
+#ModalBody ol {
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#ModalBody li {
+  margin-bottom: 1rem;
+}
+
+.modal-recipe-content:first-child {
+  border-right: 1px solid lightslategray;
+  padding-right: 0.25rem;
+}
+
+.modal-recipe-content:last-child {
+  padding-left: 1.5rem;
+}
+
 hr {
   margin: 0 1.5rem;
 }
 
-/* Footer within content box --------------------------------------- */
+/* Footer within content box ------------------------------------- */
 #ModalFooter {
-  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
   border-radius: 0 0 0.5rem 0.5rem;
+}
+
+#ModalFooter button {
+  margin: 0;
 }
