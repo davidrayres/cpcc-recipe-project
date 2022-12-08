@@ -1,17 +1,17 @@
-/* GLOBAL STYLES ================================================= */
+/* CSS RESET ***************************************************** */
+*, *::before, *::after {box-sizing: border-box}
+* {margin: 0; padding: 0; font: inherit}
+html, body {height: 100%}
+img, picture, video, canvas, svg {display: block; max-width: 100%}
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word}
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* *************************************************************** */
+
+
+/* PROJECT STYLES ================================================ */
 @import url(https://fonts.googleapis.com/css?family=Lemon);
 
-*,
-*::before,
-*::after {
-  border-collapse: collapse;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: Geogrotesque, Segoe UI, Helvetica, Arial, sans-serif;

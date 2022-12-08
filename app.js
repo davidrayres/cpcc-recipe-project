@@ -100,7 +100,7 @@ const loadRecipes = () => {
       <div class="recipe-description">${recipe.description}</div>
       <a class="recipe-details" data-ref='${recipe.ref}' href="#">delicious details...</a> 
     `
-    //insert HTML inot recipe panel
+    //insert HTML into recipe panel
     recipePanel.innerHTML = recipeSummary
 
     //attach recipe panel to main content
@@ -220,7 +220,7 @@ const launchNewRecipeModal = (e) => {
 
           <div class="modal-recipe-uibox">
             <input type="text" placeholder="Add an ingredient..." />
-            <button>+</button>
+            <button id="AddIngred">+</button>
           </div>
 
           <ul></ul>
@@ -231,7 +231,7 @@ const launchNewRecipeModal = (e) => {
 
           <div class="modal-recipe-uibox">
             <input type="text" placeholder="Add an instruction..." />
-            <button>+</button>
+            <button id="AddStep">+</button>
           </div>
 
           <ol></ol>
@@ -246,10 +246,31 @@ const launchNewRecipeModal = (e) => {
   //Insert HTML into ModalContent -----------------------------------
   ModalContent.innerHTML = recipeInputs
 
+  //Attach Event Listeners ------------------------------------------
+  document
+    .getElementById('CreateNewRecipe')
+    .addEventListener('input', (e) => {
+      
+
+    })
+
+
   //Save Button...
   document
     .getElementById('CreateNewRecipe')
     .addEventListener('click', (e) => CreateNewRecipe(e))
+
+  //Add Ingred Button...
+  document.getElementById('AddIngred').addEventListener('click', (e) => {
+    const newIngredInput = e.target.previousElementSibling
+    AddIngredient(newIngredInput)
+  })
+
+  //Add Step Button...
+  document.getElementById('AddStep').addEventListener('click', (e) => {
+    const newStepInput = e.target.previousElementSibling
+    AddStep(newStepInput)
+  })
 
   //Set up Close Modal ----------------------------------------------
   //Close and clear HTML when 'X' is clicked...

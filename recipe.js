@@ -10,21 +10,10 @@ class Recipe {
 
 //FUNCTION: Create New Recipe =======================================
 
-let newName = 'A New Recipe'
-let newDescr =
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y'
-let newIngreds = [
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-]
-let newSteps = [
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-  'ipsum lorem klhlk h glkhl kih lkjhlkj fgd gcj ljhgljk kljj fgfhe srew iytf ljgjlglkgtyi iytfiuyou ;kjh;kj ohpiu y',
-]
+let newName
+let newDescr
+const newIngreds = []
+const newSteps = []
 
 const CreateNewRecipe = () => {
   const newRecipe = new Recipe(newName, newDescr, newIngreds, newSteps)
@@ -36,4 +25,26 @@ const CreateNewRecipe = () => {
   console.log(RECIPES)
 
   loadRecipes()
+}
+
+const AddIngredient = (newIngredInput) => {
+  const ingredUl = document.querySelector('#IngredientList ul')
+  const ingredLi = document.createElement('li')
+  let newIngred = newIngredInput.value
+  ingredLi.innerHTML = newIngred
+  ingredUl.append(ingredLi)
+  newIngredInput.value = ''
+  newIngredInput.focus()
+  newIngreds.push(newIngred)
+}
+
+const AddStep = (newStepInput) => {
+  const stepUl = document.querySelector('#InstructionList ol')
+  const stepLi = document.createElement('li')
+  let newStep = newStepInput.value
+  stepLi.innerHTML = newStep
+  stepUl.append(stepLi)
+  newStepInput.value = ''
+  newStepInput.focus()
+  newSteps.push(newStep)
 }
