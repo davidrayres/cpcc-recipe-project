@@ -1,7 +1,8 @@
 //show me the data ==================================================
-console.log(RECIPES)
-
-
+console.log({RECIPES})
+localStorage.setItem("locRECIPES",JSON.stringify(RECIPES))
+const nowRECIPES = JSON.parse(localStorage.getItem(RECIPES))
+console.log({nowRECIPES})
 //Attach event listeners ============================================
 //Add Button...
 document
@@ -134,8 +135,8 @@ const launchNewRecipeModal = (e) => {
     <div id="ModalHeader">
       <img src="images/image-placeholder.png" />
       <div style="flex: 1">
-        <input type="text" placeholder="Recipe Name" />
-        <textarea placeholder="Add description..." rows="5"></textarea>
+        <input id="NewRecipeName" type="text" placeholder="Recipe Name" />
+        <textarea id="NewRecipeDescr" placeholder="Add description..." rows="5"></textarea>
       </div>
     </div>
 
@@ -175,12 +176,12 @@ const launchNewRecipeModal = (e) => {
   ModalContent.innerHTML = recipeInputs
 
   //Attach Event Listeners ------------------------------------------
-  document
-    .getElementById('CreateNewRecipe')
-    .addEventListener('input', (e) => {
+  // document
+  //   .getElementById('CreateNewRecipe')
+  //   .addEventListener('input', (e) => {
       
 
-    })
+  //   })
 
 
   //Save Button...

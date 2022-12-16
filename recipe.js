@@ -1,28 +1,39 @@
 // CLASS: Recipe ====================================================
 class Recipe {
-  constructor(name, descr, ingreds, steps) {
+  constructor(id, imageURL, name, description, ingredients, steps) {
+    this.id = id
+    this.imageURL = imageURL
     this.name = name
-    this.decsr = descr
-    this.ingrds = ingreds
+    this.description = description
+    this.ingredients = ingredients
     this.steps = steps
   }
 }
 
 //FUNCTION: Create New Recipe =======================================
-
-let newName
-let newDescr
 const newIngreds = []
 const newSteps = []
 
+console.log(Math.max(...RECIPES.map(recipe => recipe.id)) + 1)
+
+
 const CreateNewRecipe = () => {
-  const newRecipe = new Recipe(newName, newDescr, newIngreds, newSteps)
+
+  const id = Math.max(...RECIPES.map(recipe => recipe.id)) + 1 
+  const newImage = 'images/image-placeholder.png'
+  const newName = document.getElementById('NewRecipeName').value
+  const newDescr = document.getElementById('NewRecipeDescr').value
+
+  const newRecipe = new Recipe(id, newImage, newName, newDescr, newIngreds, newSteps)
+
   RECIPES.unshift(newRecipe)
   Modal.style.display = 'none'
   Modal.innerHTML = ''
 
   console.log(newRecipe)
   console.log(RECIPES)
+
+
 
   loadRecipes()
 }
@@ -35,15 +46,15 @@ const AddIngredient = (newIngredInput) => {
   ingredUl.append(ingredLi)
   newIngredInput.value = ''
   newIngredInput.focus()
-  newIngreds.push(newIngred)
+  newIngreds.push({name: newIngred})
 }
 
 const AddStep = (newStepInput) => {
-  const stepUl = document.querySelector('#InstructionList ol')
+  const stepOl = document.querySelector('#InstructionList ol')
   const stepLi = document.createElement('li')
   let newStep = newStepInput.value
   stepLi.innerHTML = newStep
-  stepUl.append(stepLi)
+  stepOl.append(stepLi)
   newStepInput.value = ''
   newStepInput.focus()
   newSteps.push(newStep)
